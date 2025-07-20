@@ -29,6 +29,7 @@ main > section {
 .section-title {
   font-size: 2.8rem;
   font-weight: 700;
+}
 /* dark 02 */
 
 .text-gray {
@@ -108,8 +109,6 @@ main {
   margin-left: 70px;
   max-width: 530px;
 }
-
-}
 #quick-list {
   font-size: 500;
   font-weight: 500;
@@ -117,11 +116,11 @@ main {
 
 /* some fact reletet style */
 
-.facts-container{
+.facts-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-.fact-cart{
+.fact-cart {
   border: 1px solid #ff900e;
   width: 240px;
   height: 240px;
@@ -130,30 +129,43 @@ main {
   align-items: center;
   justify-content: center;
 }
-.fact-number{
+.fact-number {
   font-size: 2.8rem;
   font-weight: 600;
   margin-top: 10px;
   margin-bottom: 5px;
   color: #424242;
 }
-.fact-name{
+.fact-name {
   font-size: 1.25rem;
   font-weight: 600;
   color: #727272;
   margin-top: 10px;
 }
 
-.fact-discription{
-  width: 540px;
+.fact-discription {
+  max-width: 540px;
 }
 
+/* sponsor reletet style */
 
-
-
-
-
-
+.sponsor-info {
+  max-width: 540px;
+  margin: 50px auto;
+  text-align: center;
+}
+.sonsor-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.sponsor-companies {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 150px;
+}
+.sponsor-companies img {
+  filter: grayscale(100%);
+}
 
 /* risponsive mediya quari */
 
@@ -163,21 +175,37 @@ main {
   .teams {
     flex-direction: column;
   }
-  .teams-img-container {
-    grid-template-columns: repeat(1, 1fr);
+  .teams-img-container,
+  .facts-container,
+  .sponsor-companies {
+    grid-template-columns: 1fr;
   }
   .our-features {
     margin: 10px;
   }
+  .facts-container {
+    justify-items: center;
+    gap: 20px;
+  }
+  .sponsor-companies{
+    justify-items: center;
+    gap: 50px;
+  }
+
 }
 
 /* medium device */
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
-  .teams{
+  .teams {
     flex-direction: column;
-  }  
-  .our-features{
+  }
+  .our-features {
     margin: 50px auto;
+  }
+  .sponsor-companies,
+  .facts-container{
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
   }
 }
